@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Your Name</title>
     <link rel="stylesheet" href="style.css">
+    <!-- 1. Add Prism.js CSS for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+    <!-- You can choose other themes from Prism.js CDN if you prefer -->
 </head>
 <body>
     <header>
@@ -30,17 +33,54 @@
             <p>Hello! My name is [Your Name], and this is my personal website. I'm passionate about [Your Passion 1, e.g., coding, mathematics, art] and [Your Passion 2, e.g., hiking, reading, music].</p>
             <p>On this site, you'll find a little bit about me, some of my math notes, and a gallery of pictures I've taken or that I find interesting.</p>
             <p>I created this site to share my interests and projects. Feel free to look around!</p>
+            
             <h3>My Hobbies</h3>
             <ul>
                 <li>Hobby 1</li>
                 <li>Hobby 2</li>
                 <li>Hobby 3</li>
             </ul>
+
+            <!-- 2. Add a section for your code block -->
+            <h3>My Programming Journey</h3>
+            <p>I've been learning Python and working on some interesting projects. Here's a small snippet of Python code I find useful or am proud of:</p>
+            
+            <pre><code class="language-python">
+# This is a Python comment
+def greet(name):
+    """This function greets the person passed in as a parameter."""
+    print(f"Hello, {name}!")
+
+# Example usage:
+my_name = "World"
+greet(my_name)
+
+class SimpleCalculator:
+    def add(self, x, y):
+        return x + y
+    
+    def subtract(self, x, y):
+        return x - y
+
+# Using the class
+calc = SimpleCalculator()
+result = calc.add(5, 3)
+print(f"5 + 3 = {result}")
+# Note: Make sure to escape HTML special characters if your code has them
+# e.g., < becomes < and > becomes >
+# For simple Python, it's often not an issue unless you're printing HTML.
+            </code></pre>
+            <p>I'm currently exploring [mention specific Python libraries, frameworks, or concepts, e.g., Django, data analysis with Pandas, machine learning with scikit-learn].</p>
+
         </section>
     </main>
 
     <footer>
         <p>Copyright © 2023, Your Name</p>
     </footer>
+
+    <!-- 3. Add Prism.js Core and Python language component before closing </body> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 </body>
 </html>
